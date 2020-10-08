@@ -129,7 +129,24 @@ body {
 .page-section .list-item {
   width: 25%;
   padding: 10px;
+  margin-bottom: 20px;
 }
+
+
+.page-section .list-item {
+  box-shadow: 0 3px 6px rgb(12 11 8 / 14%), 0 3px 6px rgb(16 11 1);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  margin-bottom: 15px;
+}
+
+.page-section .list-item:hover {
+  box-shadow: 0 3px 0px rgb(128 92 28 / 12%), 0 10px 10px rgb(0 0 0);
+  border-radius: 5px;
+  background: #29221666;
+}
+
+
+
 
 .page-section .list-item a {
   display: flex;
@@ -151,17 +168,25 @@ body {
 }
 
 .page-section .list-item .name {
-  font-weight: 500;
   font-size: 14px;
   text-align: center;
-  margin: 10px 0 5px 0;
+  margin: 0 0 0px 0;
+  background: orange;
+  padding: 5px 10px 5px 10px;
+  color: #222222;
+  font-weight: bold;
+  border-bottom: 1px solid #d88c02;
 }
 
 .page-section .list-item .year {
   display: block;
   text-align: center;
-  color: #777;
   font-size: 14px;
+  margin: 0 0 5px 0;
+  background: #333333;
+  padding: 5px 10px 5px 10px;
+  color: #ffa500;
+  font-weight: bold;
 }
 
 .page-section .list-item .toggle-favorite-button {
@@ -181,4 +206,46 @@ body {
 
 .page-section .list-item .toggle-favorite-button.selected {
   background: orange;
+}
+
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .page-section .list-item{
+    width: 100%;
+  }
+  .page-section .list-item .poster-wrapper{
+    width: 100%;
+    float: left;
+  }
+  .page-section .list-item .name{
+    width: 100%;
+    position: relative;
+  }
+  .page-section .list-item .year{
+    width: 100%;
+    position: relative;
+  }
+}
+
+
+@media (min-width: 401px) and (max-width: 767px) {
+  .page-section .list-item{
+    width: 100%;
+  }
+  .page-section .list-item .poster-wrapper{
+    width: 25%;
+    float: left;
+  }
+  .page-section .list-item .name{
+    width: 75%;
+    right: 0;
+    top: 36%;
+    position: absolute;
+  }
+  .page-section .list-item .year{
+    width: 75%;
+    right: 0;
+    bottom: 20%;
+    position: absolute;
+  }
 }

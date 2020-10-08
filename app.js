@@ -76,12 +76,15 @@ var movieApp = {
   },
   getListItemTemplate: function(item) {
     var $this = this;
+    var $errorImgStyle = "test";
+
 
     return '\
       <li class="list-item" data-item="' + encodeURIComponent(JSON.stringify(item)) + '">\
         <a href="#">\
           <div class="poster-wrapper">\
-            <img src="' + item.Poster + '" class="poster" alt="' + item.Title + '">\
+            <img src="' + item.Poster + '" class="poster" alt="' + item.Title + '"\
+            onerror="this.onerror=null;this.src=\'assets/img/filmapp.ico\';" >\
           </div>\
           <h3 class="name">' + item.Title + '</h3>\
           <span class="year">' + item.Year + '</span>\
